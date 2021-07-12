@@ -1,12 +1,12 @@
 import { Search, Settings } from "@material-ui/icons";
 import React from "react";
 import TrendWidget from "../../widgets/TrendWidget";
-import "./Announce.css";
 import { TwitterTweetEmbed, TwitterTimelineEmbed } from "react-twitter-embed";
+import styled from "styled-components";
 
 export default function Announce() {
   return (
-    <div>
+    <AnnounceArea>
       <div className="announce">
         <div className="search">
           <Search className="search_icon" />
@@ -41,6 +41,65 @@ export default function Announce() {
           options={{ height: 400 }}
         />
       </div>
-    </div>
+    </AnnounceArea>
   );
 }
+
+const AnnounceArea = styled.div`
+  flex: 0.3;
+  .announce {
+    margin-left: 20px;
+  }
+  .search {
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 12px 20px;
+  }
+
+  .search input {
+    background: #ddd;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .search_icon {
+    color: grey;
+    margin-right: 5px;
+  }
+
+  .tweet_container {
+    background-color: var(--twitter-background);
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 30px;
+  }
+
+  .container_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+  }
+
+  .container_title .MuiSvgIcon-root {
+    color: gray;
+  }
+  .trend {
+    margin-top: 10px;
+    border-bottom: 1px solid gray;
+  }
+
+  .trend h5 {
+    margin: 5px 0px;
+    font-weight: 500;
+  }
+  .trend h3 {
+    cursor: pointer;
+  }
+`;
