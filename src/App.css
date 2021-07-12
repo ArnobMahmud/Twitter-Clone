@@ -4,11 +4,12 @@
 }
 
 .App {
-  width: 1200px;
+  width: 1300px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
   height: 100vh;
+  padding: 0 10px;
 }
 
 body {

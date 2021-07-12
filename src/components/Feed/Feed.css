@@ -11,9 +11,9 @@
   top: 0;
   background-color: white;
   border: 1px solid var(--twitter-background);
-  padding: 15px 20px;
   z-index: 70;
   display: flex;
+  padding: 10px 20px;
   justify-content: space-between;
   align-items: center;
 }
@@ -21,6 +21,13 @@
 .feed_nav .MuiSvgIcon-root {
   color: var(--twitter-color);
   font-size: 30px;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.feed_nav .MuiSvgIcon-root:hover {
+  background-color: var(--twitter-background);
 }
 .feed_section::-webkit-scrollbar {
   display: none;
@@ -53,6 +60,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 5%;
 }
 .more_options_icons > .MuiSvgIcon-root {
   cursor: pointer;
@@ -80,5 +88,4 @@
   padding: 10px 30px !important;
   margin-bottom: 20px;
   margin-right: 10px;
-  
 }
