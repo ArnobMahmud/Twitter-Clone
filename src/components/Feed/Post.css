@@ -4,7 +4,19 @@
   justify-content: start;
   margin-left: 5px;
 }
-
+.post_header_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post {
+  position: relative;
+}
+.postTime {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
 .post_header_info {
   margin-left: 5px;
 }

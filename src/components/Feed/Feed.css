@@ -3,7 +3,6 @@
   border-right: 1px solid var(--twitter-background);
   border-left: 1px solid var(--twitter-background);
   min-width: fit-content;
-  overflow-y: scroll;
 }
 
 .feed_nav {
@@ -11,7 +10,7 @@
   top: 0;
   background-color: white;
   border: 1px solid var(--twitter-background);
-  z-index: 70;
+  z-index: 100;
   display: flex;
   padding: 10px 20px;
   justify-content: space-between;
@@ -49,8 +48,16 @@
   align-items: center;
 }
 
+.imagePost input{
+  margin-left: 20px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
 .top_option > form > input {
   border: none;
+  width: 100%;
   outline: none;
   margin-left: 20px;
   font-size: 24px;

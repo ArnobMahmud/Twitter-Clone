@@ -37,6 +37,9 @@ export default function PostWidget({
               </div>
             </div>
           </div>
+          <div className="postTime">
+            <p>3pm</p>
+          </div>
         </div>
         <div className="post_body">
           <div className="body_title">

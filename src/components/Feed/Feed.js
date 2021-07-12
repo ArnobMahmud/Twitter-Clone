@@ -13,7 +13,7 @@ export default function Feed() {
         </div>
         <PostBox />
         <div className="feed_posts">
-          <Post />
+          <Post /> <Post /> <Post />
         </div>
       </div>
     </div>
