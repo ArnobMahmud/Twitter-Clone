@@ -1,10 +1,18 @@
 import { NewReleasesOutlined } from "@material-ui/icons";
 import React from "react";
 import PostBox from "../../widgets/PostBox";
-import Post from "./Post";
 import styled from "styled-components";
+import { useState, useEffect } from "react";
+import db from "../../auth/firebase";
+import PostWidget from "../../widgets/PostWidget";
 
 export default function Feed() {
+  const [posts, setsPosts] = useState([]);
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapShot) => {
+      setsPosts(snapShot.docs.map((doc) => doc.data()));
+    });
+  }, []);
   return (
     <FeedSection>
       <div className="feed_section">
@@ -14,7 +22,16 @@ export default function Feed() {
         </div>
         <PostBox />
         <div className="feed_posts">
-          <Post />
+          {posts.map((post) => (
+            <PostWidget
+              avatar={post.avatar}
+              displayName={post.displayName}
+              userName={post.userName}
+              verified={post.verified}
+              text={post.text}
+              image={post.image}
+            />
+          ))}
         </div>
       </div>
     </FeedSection>
@@ -183,7 +200,8 @@ const FeedSection = styled.div`
     margin-bottom: 10px;
   }
   .body_image img {
-    border-radius: 13px;
+    border-radius: 10px;
+    max-width: 100%;
   }
 
   .post_option > .MuiSvgIcon-root {

@@ -2,9 +2,7 @@ import { Avatar } from "@material-ui/core";
 import {
   ChatBubbleOutline,
   FavoriteBorder,
-  FavoriteOutlined,
   KeyboardCapslock,
-  Share,
   Transform,
   VerifiedUser,
 } from "@material-ui/icons";
@@ -33,12 +31,12 @@ export default function PostWidget({
                     {verified ? <VerifiedUser className="blueTick" /> : null}
                   </span>
                 </h3>
-                <h5>{userName} </h5>
+                <h5>@{userName} </h5>
               </div>
             </div>
           </div>
           <div className="postTime">
-            <p>3pm</p>
+            <p>{timestamp}</p>
           </div>
         </div>
         <div className="post_body">

@@ -23,16 +23,6 @@ export default function Announce() {
             tweetAmount="22k"
           />
           <TrendWidget title="Sports" topic="Euro2020" tweetAmount="1.75M" />
-          <TrendWidget
-            title="Trending in Bangladesh"
-            topic="Fiverr"
-            tweetAmount="22k"
-          />
-          <TrendWidget
-            title="Trending in Bangladesh"
-            topic="Fiverr"
-            tweetAmount="22k"
-          />
         </div>
         <TwitterTweetEmbed tweetId="1412790526198181894" />
         <TwitterTimelineEmbed
