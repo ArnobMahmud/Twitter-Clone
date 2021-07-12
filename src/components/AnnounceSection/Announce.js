@@ -1,4 +1,5 @@
 import React from "react";
+import SideBar from "../SideBar/SideBar";
 import "./Announce.css";
 
 export default function Announce() {
