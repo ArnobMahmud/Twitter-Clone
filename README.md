@@ -1,6 +1,6 @@
 # Twitter Clone
 
-![Capture](https://user-images.githubusercontent.com/60808266/125336476-a429a600-e36f-11eb-9c66-2e2557465204.PNG)
+![Capture](https://user-images.githubusercontent.com/60808266/125337959-73e30700-e371-11eb-9b77-74575263714f.PNG)
 
 
 # Getting Started with Create React App

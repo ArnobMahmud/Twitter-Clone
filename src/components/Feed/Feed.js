@@ -41,8 +41,8 @@ export default function Feed() {
 const FeedSection = styled.div`
   flex: 0.4;
   .feed_section {
-    border-right: 1px solid var(--twitter-background);
-    border-left: 1px solid var(--twitter-background);
+    /* border-right: 1px solid var(--twitter-background); */
+    /* border-left: 1px solid var(--twitter-background); */
     min-width: fit-content;
   }
 

@@ -37,6 +37,7 @@ export default function Announce() {
 
 const AnnounceArea = styled.div`
   flex: 0.3;
+  border-left: 1px solid var(--twitter-background);
   .announce {
     margin-left: 20px;
   }
@@ -88,8 +89,10 @@ const AnnounceArea = styled.div`
   .trend h5 {
     margin: 5px 0px;
     font-weight: 500;
+    color: gray;
   }
   .trend h3 {
     cursor: pointer;
+    color: #0a000a;
   }
 `;

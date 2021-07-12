@@ -18,6 +18,7 @@ export default function SideBar() {
 
 const SideArea = styled.div`
   flex: 0.3;
+  border-right: 1px solid var(--twitter-background);
   .twitter_icon {
     color: var(--twitter-color);
     font-size: 60px !important;
