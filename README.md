@@ -1,3 +1,8 @@
+# Twitter Clone
+
+![Capture](https://user-images.githubusercontent.com/60808266/125336476-a429a600-e36f-11eb-9c66-2e2557465204.PNG)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
