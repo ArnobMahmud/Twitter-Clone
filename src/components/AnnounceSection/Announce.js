@@ -22,7 +22,14 @@ export default function Announce() {
             topic="Fiverr"
             tweetAmount="22k"
           />
-          <TrendWidget title="Sports" topic="Euro2020" tweetAmount="1.75M" />
+          <TrendWidget title="Sports" topic="Euro2020" tweetAmount="1.75M" />{" "}
+          <TrendWidget title="Technology" topic="Bitcoin" tweetAmount="215k" />
+          <TrendWidget title="Politics" topic="Cuba" tweetAmount="646k" />
+          <TrendWidget
+            title="Trending in Bangladesh"
+            topic="OnlineMarketing"
+            tweetAmount="32k"
+          />
         </div>
         <TwitterTweetEmbed tweetId="1412790526198181894" />
         <TwitterTimelineEmbed

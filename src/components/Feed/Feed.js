@@ -53,7 +53,7 @@ const FeedSection = styled.div`
     position: sticky;
     top: 0;
     background-color: white;
-    border: 1px solid var(--twitter-background);
+    border-bottom: 1px solid var(--twitter-background);
     z-index: 100;
     display: flex;
     padding: 10px 20px;
@@ -175,8 +175,9 @@ const FeedSection = styled.div`
     margin: 0px 5px;
   }
 
-  .post_header_content h3 span {
+  .post_header_content h3 span .blueTick {
     margin-left: 5px;
+    font-size: 18px;
   }
 
   .blueTick {

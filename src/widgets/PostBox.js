@@ -4,7 +4,7 @@ import {
   CalendarTodayOutlined,
   EmojiEmotionsOutlined,
   GifOutlined,
-  PhotoAlbum,
+  PhotoLibrary,
   PollOutlined,
 } from "@material-ui/icons";
 import db from "../auth/firebase";
@@ -53,7 +53,7 @@ export default function PostBox() {
         </form>
         <div className="more_option">
           <div className="more_options_icons">
-            <PhotoAlbum className="more_option_icons" />
+            <PhotoLibrary className="more_option_icons" />
             <GifOutlined className="more_option_icons" />
             <PollOutlined className="more_option_icons" />
             <EmojiEmotionsOutlined className="more_option_icons" />

@@ -21,7 +21,8 @@ const SideArea = styled.div`
   border-right: 1px solid var(--twitter-background);
   .twitter_icon {
     color: var(--twitter-color);
-    font-size: 60px !important;
+    font-size: 70px !important;
+    margin-top: 10px;
     margin-left: 20px;
     margin-bottom: 20px;
     cursor: pointer;
