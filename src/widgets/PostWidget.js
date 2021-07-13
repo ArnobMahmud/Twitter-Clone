@@ -36,7 +36,7 @@ export default function PostWidget({
             </div>
           </div>
           <div className="postTime">
-            <p>{timestamp}</p>
+            <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
           </div>
         </div>
         <div className="post_body">

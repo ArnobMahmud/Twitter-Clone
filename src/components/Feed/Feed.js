@@ -9,9 +9,11 @@ import PostWidget from "../../widgets/PostWidget";
 export default function Feed() {
   const [posts, setsPosts] = useState([]);
   useEffect(() => {
-    db.collection("posts").onSnapshot((snapShot) => {
-      setsPosts(snapShot.docs.map((doc) => doc.data()));
-    });
+    db.collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapShot) => {
+        setsPosts(snapShot.docs.map((doc) => doc.data()));
+      });
   }, []);
   return (
     <FeedSection>
@@ -26,6 +28,7 @@ export default function Feed() {
             <PostWidget
               avatar={post.avatar}
               displayName={post.displayName}
+              timestamp={post.timestamp}
               userName={post.userName}
               verified={post.verified}
               text={post.text}
@@ -56,6 +59,7 @@ const FeedSection = styled.div`
     padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
+    /* box-shadow: 1px 1px 4px 2px #f3efef; */
   }
 
   .feed_nav .MuiSvgIcon-root {

@@ -35,10 +35,6 @@ const SideArea = styled.div`
     border-radius: 20px;
   }
 
-  .menu_active {
-    color: var(--twitter-color);
-  }
-
   .sidebar_menu > .MuiSvgIcon-root {
     margin-right: 20px;
     font-weight: 800;
@@ -53,7 +49,9 @@ const SideArea = styled.div`
     background-color: #e8f5fe;
     color: var(--twitter-color);
   }
-
+  .sidebar_menu .menu_active {
+    color: var(--twitter-color);
+  }
   .tweet-btn {
     display: block;
     background-color: var(--twitter-color) !important;
