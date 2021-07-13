@@ -12,7 +12,9 @@ export default function Feed() {
     db.collection("posts")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapShot) => {
-        setsPosts(snapShot.docs.map((doc) => doc.data()));
+        setsPosts(
+          snapShot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
       });
   }, []);
   return (
@@ -26,13 +28,14 @@ export default function Feed() {
         <div className="feed_posts">
           {posts.map((post) => (
             <PostWidget
-              avatar={post.avatar}
-              displayName={post.displayName}
-              timestamp={post.timestamp}
-              userName={post.userName}
-              verified={post.verified}
-              text={post.text}
-              image={post.image}
+              key={post.id}
+              avatar={post.data.avatar}
+              displayName={post.data.displayName}
+              timestamp={post.data.timestamp}
+              userName={post.data.userName}
+              verified={post.data.verified}
+              text={post.data.text}
+              image={post.data.image}
             />
           ))}
         </div>
@@ -93,9 +96,12 @@ const FeedSection = styled.div`
     align-items: center;
   }
 
+  .top_option > form > input::placeholder {
+    font-size: 16px;
+  }
   .imagePost input {
     margin-left: 20px;
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     outline: none;
   }

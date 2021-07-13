@@ -9,22 +9,23 @@ import {
 } from "@material-ui/icons";
 import db from "../auth/firebase";
 import firebase from "firebase";
+import { useStateValue } from "../provider/StateProvider";
 
 export default function PostBox() {
+  const [{ user }, dispatch] = useStateValue();
   const [tweet, setTweet] = useState([]);
   const [tweetImage, setTweetImage] = useState([]);
 
   const tweetPost = (e) => {
     e.preventDefault();
     db.collection("posts").add({
-      displayName: "Arnob Mahmud",
-      userName: "arnob__mahmud",
+      displayName: user.displayName,
+      userName: user.displayName,
       verified: true,
       text: tweet,
       image: tweetImage,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      avatar:
-        "https://scontent.fdac8-1.fna.fbcdn.net/v/t1.6435-9/171027468_103552885200148_6721370629770645453_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=XI5MFsIOX9YAX9Xexgr&_nc_ht=scontent.fdac8-1.fna&oh=3f38e2d9e185a5b5f8732901cdde288f&oe=60F168BA",
+      avatar: user.photoURL,
     });
     setTweet("");
     setTweetImage("");
@@ -33,13 +34,13 @@ export default function PostBox() {
     <div>
       <div className="post_container">
         <div className="top_option">
-          <Avatar src="https://scontent.fdac8-1.fna.fbcdn.net/v/t1.6435-9/171027468_103552885200148_6721370629770645453_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=XI5MFsIOX9YAX9Xexgr&_nc_ht=scontent.fdac8-1.fna&oh=3f38e2d9e185a5b5f8732901cdde288f&oe=60F168BA" />
+          <Avatar src={user.photoURL} />
           <form>
             <input
               type="text"
               onChange={(e) => setTweet(e.target.value)}
               value={tweet}
-              placeholder="What's happening?"
+              placeholder={`What's happening, ${user.displayName}?`}
             />{" "}
           </form>
         </div>
@@ -48,7 +49,7 @@ export default function PostBox() {
             type="text"
             onChange={(e) => setTweetImage(e.target.value)}
             value={tweetImage}
-            placeholder="Paste a link of image / gif!"
+            placeholder="Paste a link of image here!"
           />
         </form>
         <div className="more_option">
