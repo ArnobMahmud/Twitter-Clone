@@ -7,7 +7,7 @@ import { useStateValue } from "../provider/StateProvider";
 import { auth, provider } from "./firebase";
 import { FcGoogle } from "react-icons/fc";
 export default function Login() {
-  const [state, dispatch] = useStateValue();
+  const [state,dispatch] = useStateValue();
 
   const signIn = () => {
     auth
@@ -34,6 +34,7 @@ export default function Login() {
             </Button>
           </div>
         </div>
+        <h3>Develop with Arnob Mahmud</h3>
       </div>
     </LoginSection>
   );
@@ -45,7 +46,7 @@ const LoginSection = styled.div`
     margin: auto;
   }
   .content {
-    height: 100vh;
+    height: 90vh;
   }
   .flex {
     display: flex;
@@ -56,7 +57,7 @@ const LoginSection = styled.div`
     align-items: center;
   }
   .justify-content {
-    justify-content: space-around !important;
+    justify-content: space-around;
   }
   .twitter-icon .MuiSvgIcon-root {
     color: var(--twitter-color);
@@ -66,9 +67,9 @@ const LoginSection = styled.div`
     align-items: center;
     vertical-align: middle;
   }
-  .loginSection h3 {
-    color: brown;
-    font-size: 30px;
+  h3 {
+    color: #8e98d5;
+    text-align: center;
   }
   .loginSection Button {
     margin-top: 40px;

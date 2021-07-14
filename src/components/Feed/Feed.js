@@ -13,7 +13,11 @@ export default function Feed() {
       .orderBy("timestamp", "desc")
       .onSnapshot((snapShot) => {
         setsPosts(
-          snapShot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+          snapShot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data()
+           })
+          )
         );
       });
   }, []);
@@ -45,10 +49,7 @@ export default function Feed() {
 }
 
 const FeedSection = styled.div`
-  flex: 0.4;
-  .feed_section {
-    min-width: fit-content;
-  }
+  width: 600px;
 
   .feed_nav {
     position: sticky;
@@ -66,7 +67,6 @@ const FeedSection = styled.div`
   .feed_nav .MuiSvgIcon-root {
     color: var(--twitter-color);
     font-size: 30px;
-    padding: 10px;
     border-radius: 30px;
     cursor: pointer;
   }
@@ -96,6 +96,7 @@ const FeedSection = styled.div`
 
   .top_option > form > input::placeholder {
     font-size: 16px;
+    line-break: anywhere;
   }
   .imagePost input {
     margin-left: 20px;
@@ -119,15 +120,13 @@ const FeedSection = styled.div`
   }
   .more_options_icons > .MuiSvgIcon-root {
     cursor: pointer;
-    margin: 10px;
-    height: 20;
-    width: 20;
+    margin: 5px;
     color: var(--twitter-color);
-    border-radius: 50%;
   }
 
   .more_options_icons > .MuiSvgIcon-root:hover {
     background-color: var(--twitter-background);
+    border-radius: 50%;
   }
 
   .more_option .tweet-btn {
@@ -156,16 +155,13 @@ const FeedSection = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  .post {
-    position: relative;
-  }
-  .postTime {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
   .post_header_info {
     margin-left: 5px;
+  }
+
+  .postTime {
+    margin: 5px 0px;
+    font-size: 14px;
   }
 
   .post_header {
@@ -193,16 +189,17 @@ const FeedSection = styled.div`
   }
 
   .post_body {
-    padding: 5px 60px;
+    padding: 5px 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
 
-  .body_title {
+  .body_title p {
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 400;
+    line-break: anywhere;
   }
 
   .body_image {
@@ -214,8 +211,7 @@ const FeedSection = styled.div`
   }
 
   .post_option > .MuiSvgIcon-root {
-    padding: 5px;
-    border-radius: 30px;
+    font-size: 18px;
     cursor: pointer;
   }
 
@@ -235,12 +231,19 @@ const FeedSection = styled.div`
     border: 1px solid rgba(189, 179, 179, 0.397);
     box-shadow: 3px 3px 7px 0px #d3cfcf6b;
   }
-  @media (max-width: 1100px) {
-    flex: auto;
-    width: fit-content;
-    margin-right: 1px solid var(--twitter-background);
+  @media (max-width: 991px) {
+    width: auto;
+    border-right: 1px solid var(--twitter-background);
     .feed_nav .MuiSvgIcon-root {
-      font-size: 50px;
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 767px) {
+    .post_body {
+      padding: 5px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 `;

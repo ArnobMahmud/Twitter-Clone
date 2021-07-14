@@ -32,11 +32,11 @@ export default function PostWidget({
                   </span>
                 </h3>
                 <h5>@{userName} </h5>
+                <div className="postTime">
+                  <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="postTime">
-            <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
           </div>
         </div>
         <div className="post_body">

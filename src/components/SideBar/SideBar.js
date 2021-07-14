@@ -17,7 +17,7 @@ export default function SideBar() {
 }
 
 const SideArea = styled.div`
-  flex: 0.3;
+  width: 300px;
   border-right: 1px solid var(--twitter-background);
   .twitter_icon {
     color: var(--twitter-color);
@@ -66,8 +66,7 @@ const SideArea = styled.div`
     text-transform: inherit !important;
     font-size: 20px !important;
   }
-  @media (max-width: 1100px) {
-    flex: 0;
+  @media (max-width: 991px) {
     .sidebar_menu h4 {
       display: none;
     }
@@ -76,15 +75,12 @@ const SideArea = styled.div`
     }
     .twitter_icon {
       font-size: 70px !important;
-      margin-top: 10px;
-      margin-left: 0px;
-      margin-right: 10px;
-      margin-bottom: 20px;
+      margin: 10px 0px 10px 0px;
       cursor: pointer;
     }
     .sidebar_menu {
       width: fit-content;
-      margin: auto;
+      margin: 0;
     }
   }
 `;
