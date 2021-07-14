@@ -66,4 +66,25 @@ const SideArea = styled.div`
     text-transform: inherit !important;
     font-size: 20px !important;
   }
+  @media (max-width: 1100px) {
+    flex: 0;
+    .sidebar_menu h4 {
+      display: none;
+    }
+    .tweet-btn {
+      display: none;
+    }
+    .twitter_icon {
+      font-size: 70px !important;
+      margin-top: 10px;
+      margin-left: 0px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .sidebar_menu {
+      width: fit-content;
+      margin: auto;
+    }
+  }
 `;

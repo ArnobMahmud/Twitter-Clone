@@ -47,8 +47,6 @@ export default function Feed() {
 const FeedSection = styled.div`
   flex: 0.4;
   .feed_section {
-    /* border-right: 1px solid var(--twitter-background); */
-    /* border-left: 1px solid var(--twitter-background); */
     min-width: fit-content;
   }
 
@@ -121,7 +119,7 @@ const FeedSection = styled.div`
   }
   .more_options_icons > .MuiSvgIcon-root {
     cursor: pointer;
-    padding: 10px;
+    margin: 10px;
     height: 20;
     width: 20;
     color: var(--twitter-color);
@@ -236,5 +234,13 @@ const FeedSection = styled.div`
     border-radius: 10px;
     border: 1px solid rgba(189, 179, 179, 0.397);
     box-shadow: 3px 3px 7px 0px #d3cfcf6b;
+  }
+  @media (max-width: 1100px) {
+    flex: auto;
+    width: fit-content;
+    margin-right: 1px solid var(--twitter-background);
+    .feed_nav .MuiSvgIcon-root {
+      font-size: 50px;
+    }
   }
 `;

@@ -102,4 +102,7 @@ const AnnounceArea = styled.div`
     cursor: pointer;
     color: #0a000a;
   }
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
